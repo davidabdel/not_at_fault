@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-bebas: "Bebas Neue", cursive;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-orange: #FF5C00;
+  --color-brand-charcoal: #1C1C1C;
+  --color-brand-light-grey: #F4F4F4;
+  --color-brand-mid-grey: #6B6B6B;
+  --color-brand-pale-orange: #FFF0E8;
+  --color-brand-green: #00A86B;
+
+  --radius-brand: 10px;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-brand-charcoal bg-white antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bebas tracking-tight uppercase leading-tight;
+  }
+}
+
+.markdown-body h2 {
+  @apply text-3xl mb-4 mt-8;
+}
+
+.markdown-body h3 {
+  @apply text-2xl mb-3 mt-6;
+}
+
+.markdown-body p {
+  @apply mb-4 leading-relaxed;
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+}
