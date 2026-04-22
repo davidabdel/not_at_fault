@@ -10,11 +10,41 @@ import { PHONE_NUMBER } from '../constants';
 
 const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    
+    try {
+      const response = await fetch('https://services.leadconnectorhq.com/hooks/PLTsF5RFrXSBfkVPz0iA/webhook-trigger/ad8491be-6b5b-4da6-97ac-919f9dd94bcc', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        console.error('Webhook submission failed');
+        alert('Something went wrong. Please try calling us directly.');
+      }
+    } catch (error) {
+      console.error('Error submitting webhook:', error);
+      alert('Network error. Please check your connection.');
+    } finally {
+      setLoading(false);
+    }
   };
+
 
   return (
     <div className="flex flex-col">
@@ -109,6 +139,8 @@ const Contact: React.FC = () => {
                         <input 
                           type="text" 
                           required
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className="w-full px-4 py-3 bg-brand-light-grey border border-gray-200 rounded focus:border-brand-orange focus:outline-none transition-all font-medium"
                           placeholder="John Citizen"
                         />
@@ -118,6 +150,8 @@ const Contact: React.FC = () => {
                         <input 
                           type="tel" 
                           required
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           className="w-full px-4 py-3 bg-brand-light-grey border border-gray-200 rounded focus:border-brand-orange focus:outline-none transition-all font-medium"
                           placeholder="0400 000 000"
                         />
@@ -128,6 +162,8 @@ const Contact: React.FC = () => {
                       <input 
                         type="email" 
                         required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 bg-brand-light-grey border border-gray-200 rounded focus:border-brand-orange focus:outline-none transition-all font-medium"
                         placeholder="john@example.com"
                       />
@@ -137,19 +173,24 @@ const Contact: React.FC = () => {
                       <textarea 
                         rows={5}
                         required
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="w-full px-4 py-3 bg-brand-light-grey border border-gray-200 rounded focus:border-brand-orange focus:outline-none transition-all font-medium"
                         placeholder="E.g. Someone reversed into my parked car in Sydney CBD today. I have their details."
                       />
                     </div>
 
+
                     <div className="pt-4">
                       <button 
                         type="submit"
-                        className="w-full bg-brand-orange text-white py-4 rounded font-bebas text-2xl tracking-widest hover:bg-brand-charcoal transition-all shadow-lg flex items-center justify-center"
+                        disabled={loading}
+                        className="w-full bg-brand-orange text-white py-4 rounded font-bebas text-2xl tracking-widest hover:bg-brand-charcoal transition-all shadow-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        Send Free Assessment Request <Send size={20} className="ml-3" />
+                        {loading ? 'Sending...' : 'Send Free Assessment Request'} <Send size={20} className="ml-3" />
                       </button>
                     </div>
+
 
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-gray-100 pt-8">
                        {[
