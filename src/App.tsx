@@ -18,6 +18,12 @@ import BlogIndex from './pages/BlogIndex';
 import BlogPostPage from './pages/BlogPostPage';
 import Contact from './pages/Contact';
 
+// SEO Service Pages
+import NotAtFaultAccident from './pages/NotAtFaultAccident';
+import ReplacementVehicle from './pages/ReplacementVehicle';
+import ClaimsProcess from './pages/ClaimsProcess';
+import WhoPaysDamages from './pages/WhoPaysDamages';
+
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -38,6 +44,10 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/not-at-fault-repairs" element={<NotAtFaultRepairs />} />
+            <Route path="/not-at-fault-accident" element={<NotAtFaultAccident />} />
+            <Route path="/replacement-vehicle-after-accident" element={<ReplacementVehicle />} />
+            <Route path="/car-accident-claims-process" element={<ClaimsProcess />} />
+            <Route path="/who-pays-for-damages-not-at-fault" element={<WhoPaysDamages />} />
             <Route path="/free-loan-car" element={<LoanCar />} />
             <Route path="/insurance-claim-help" element={<InsuranceHelp />} />
             <Route path="/blog" element={<BlogIndex />} />

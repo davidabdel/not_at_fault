@@ -24,7 +24,16 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'How It Works', path: '/how-it-works' },
-    { name: 'Our Services', path: '/not-at-fault-repairs' },
+    { 
+      name: 'Our Services', 
+      path: '/not-at-fault-repairs',
+      subLinks: [
+        { name: 'Not At Fault Accident', path: '/not-at-fault-accident' },
+        { name: 'Replacement Vehicle', path: '/replacement-vehicle-after-accident' },
+        { name: 'Claims Process', path: '/car-accident-claims-process' },
+        { name: 'Who Pays For Damages?', path: '/who-pays-for-damages-not-at-fault' },
+      ]
+    },
     { name: 'Free Loan Car', path: '/free-loan-car' },
     { name: 'Insurance Help', path: '/insurance-claim-help' },
     { name: 'Blog', path: '/blog' },
@@ -47,17 +56,31 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Nav - Centered */}
-        <div className="hidden lg:flex items-center space-x-6">
+        <div className="hidden lg:flex items-center space-x-6 h-full">
           {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`text-[14px] font-sans font-medium transition-colors hover:text-brand-orange ${
-                location.pathname === link.path ? 'text-brand-orange' : 'text-brand-mid-grey'
-              }`}
-            >
-              {link.name}
-            </Link>
+            <div key={link.path} className="relative group h-full flex items-center">
+              <Link
+                to={link.path}
+                className={`text-[14px] font-sans font-medium transition-colors hover:text-brand-orange py-2 ${
+                  location.pathname === link.path ? 'text-brand-orange' : 'text-brand-mid-grey'
+                }`}
+              >
+                {link.name}
+              </Link>
+              {link.subLinks && (
+                <div className="absolute top-[80px] left-0 w-64 bg-white border border-gray-100 shadow-xl rounded-b-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 mt-0 z-50">
+                  {link.subLinks.map(subLink => (
+                    <Link
+                      key={subLink.path}
+                      to={subLink.path}
+                      className="block px-4 py-2.5 text-[14px] text-brand-charcoal hover:bg-brand-light-grey hover:text-brand-orange transition-colors"
+                    >
+                      {subLink.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
@@ -98,16 +121,31 @@ const Navbar: React.FC = () => {
           >
             <div className="flex flex-col items-center space-y-6 px-6">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={closeMenu}
-                  className={`text-2xl font-bebas tracking-wide w-full text-center py-2 ${
-                    location.pathname === link.path ? 'text-brand-orange' : 'text-brand-charcoal'
-                  }`}
-                >
-                  {link.name}
-                </Link>
+                <div key={link.path} className="w-full flex flex-col items-center">
+                  <Link
+                    to={link.path}
+                    onClick={closeMenu}
+                    className={`text-2xl font-bebas tracking-wide w-full text-center py-2 ${
+                      location.pathname === link.path ? 'text-brand-orange' : 'text-brand-charcoal'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                  {link.subLinks && (
+                    <div className="flex flex-col items-center space-y-3 mt-2 w-full bg-brand-light-grey/50 py-4 rounded-xl">
+                      {link.subLinks.map(subLink => (
+                        <Link
+                          key={subLink.path}
+                          to={subLink.path}
+                          onClick={closeMenu}
+                          className="text-[17px] font-sans font-medium text-brand-mid-grey hover:text-brand-orange transition-colors py-1"
+                        >
+                          {subLink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <hr className="w-full border-gray-100" />
               <a 
