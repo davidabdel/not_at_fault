@@ -34,7 +34,7 @@ const BlogPostPage: React.FC = () => {
       {/* Article Header */}
       <header className="bg-brand-charcoal text-white pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={`https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=1200`} alt="Background" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+          <img src={post.image || "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=1200"} alt="Background" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto space-y-6">
@@ -144,7 +144,9 @@ const BlogPostPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
            {relatedPosts.map(rp => (
              <div key={rp.id} className="bg-white rounded-brand shadow-soft overflow-hidden border border-gray-100 flex flex-col">
-               <div className="h-40 bg-brand-pale-orange" />
+               <div className="h-40 bg-brand-pale-orange relative overflow-hidden">
+                 {rp.image && <img src={rp.image} alt={rp.title} className="w-full h-full object-cover opacity-80" />}
+               </div>
                <div className="p-6">
                  <p className="text-xs font-bold text-brand-orange uppercase mb-2">{rp.category}</p>
                  <h4 className="text-xl mb-4 font-bebas tracking-wide transition-colors group-hover:text-brand-orange line-clamp-2 h-14">

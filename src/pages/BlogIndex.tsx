@@ -63,7 +63,7 @@ const BlogIndex: React.FC = () => {
                 <div key={post.id} className="bg-white rounded-brand shadow-soft overflow-hidden border border-gray-100 flex flex-col hover:translate-y-[-4px] transition-all duration-300">
                   <div className="h-52 bg-brand-pale-orange overflow-hidden relative">
                     <img 
-                      src="https://images.unsplash.com/photo-1598128558393-70ff21433be0?auto=format&fit=crop&q=80&w=600" 
+                      src={post.image || "https://images.unsplash.com/photo-1598128558393-70ff21433be0?auto=format&fit=crop&q=80&w=600"} 
                       alt={post.title} 
                       className="w-full h-full object-cover opacity-80" 
                       referrerPolicy="no-referrer"
