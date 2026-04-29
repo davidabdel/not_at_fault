@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-start">
                 <MapPin size={20} className="mr-3 text-brand-orange flex-shrink-0" />
-                <span>Head Office: Sydney CBD,<br />NSW 2000, Australia</span>
+                <span>Head Office: 1/457-459 Elizabeth Street,<br />Surry Hills, NSW 2010</span>
               </li>
             </ul>
           </div>
