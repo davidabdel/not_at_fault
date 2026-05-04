@@ -404,7 +404,7 @@ const SmashRepairsCity: React.FC = () => {
             <span className="font-bebas text-[20px] text-[#FF5C00] leading-none -mt-1">CLAIMS</span>
           </div>
           <p className="font-sans text-[11px] text-[#6B6B6B]">
-            Not at Fault Claims Management Ltd &middot; ACN 697 333 494
+            Not at Fault Claims Management Ltd &middot; ABN 44 697 333 494
           </p>
           <div className="flex gap-4 font-sans text-[11px] text-[#6B6B6B]">
             <a href="#" className="hover:text-[#1C1C1C] transition-colors">Privacy Policy</a>

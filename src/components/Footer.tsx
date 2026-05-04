@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 space-y-4 md:space-y-0">
-          <p>© {currentYear} Not At Fault Claims Australia. ABN 00 000 000 000. All rights reserved.</p>
+          <p>© {currentYear} Not At Fault Claims Australia. ABN 44 697 333 494. All rights reserved.</p>
           <div className="flex space-x-6">
             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
