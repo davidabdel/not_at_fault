@@ -33,9 +33,11 @@ const ScrollToTop = () => {
   return null;
 };
 
+import SmashRepairsCity from './pages/SmashRepairsCity';
+
 const AppLayout = () => {
   const { pathname } = useLocation();
-  const isLandingPage = pathname === '/not-at-fault-repairs';
+  const isLandingPage = pathname === '/not-at-fault-repairs' || pathname.startsWith('/smash-repairs-');
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -45,6 +47,7 @@ const AppLayout = () => {
           <Route path="/" element={<Home />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/not-at-fault-repairs" element={<NotAtFaultRepairs />} />
+          <Route path="/smash-repairs-:city" element={<SmashRepairsCity />} />
           <Route path="/not-at-fault-accident" element={<NotAtFaultAccident />} />
           <Route path="/replacement-vehicle-after-accident" element={<ReplacementVehicle />} />
           <Route path="/car-accident-claims-process" element={<ClaimsProcess />} />
