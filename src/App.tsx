@@ -17,6 +17,7 @@ import InsuranceHelp from './pages/InsuranceHelp';
 import BlogIndex from './pages/BlogIndex';
 import BlogPostPage from './pages/BlogPostPage';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 // SEO Service Pages
 import NotAtFaultAccident from './pages/NotAtFaultAccident';
@@ -57,6 +58,9 @@ const AppLayout = () => {
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/contact" element={<Contact />} />
+          
+          {/* Catch-all for 404 Page Not Found */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       {!isLandingPage && <Footer />}
