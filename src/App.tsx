@@ -35,6 +35,7 @@ const ScrollToTop = () => {
 };
 
 import SmashRepairsCity from './pages/SmashRepairsCity';
+import AccidentHelp from './pages/AccidentHelp';
 
 const AppLayout = () => {
   const { pathname } = useLocation();
@@ -48,7 +49,7 @@ const AppLayout = () => {
           <Route path="/" element={<Home />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/not-at-fault-repairs" element={<NotAtFaultRepairs />} />
-          <Route path="/accident-help" element={<SmashRepairsCity />} />
+          <Route path="/accident-help" element={<AccidentHelp />} />
           <Route path="/smash-repairs" element={<SmashRepairsCity />} />
           <Route path="/smash-repairs-sydney" element={<SmashRepairsCity />} />
           <Route path="/smash-repairs-melbourne" element={<SmashRepairsCity />} />
