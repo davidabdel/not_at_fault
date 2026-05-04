@@ -38,7 +38,7 @@ import SmashRepairsCity from './pages/SmashRepairsCity';
 
 const AppLayout = () => {
   const { pathname } = useLocation();
-  const isLandingPage = pathname === '/not-at-fault-repairs' || pathname.startsWith('/smash-repairs-') || pathname === '/accident-help';
+  const isLandingPage = pathname === '/not-at-fault-repairs' || pathname.startsWith('/smash-repairs-') || pathname === '/accident-help' || pathname === '/smash-repairs';
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -49,6 +49,7 @@ const AppLayout = () => {
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/not-at-fault-repairs" element={<NotAtFaultRepairs />} />
           <Route path="/accident-help" element={<SmashRepairsCity />} />
+          <Route path="/smash-repairs" element={<SmashRepairsCity />} />
           <Route path="/smash-repairs-sydney" element={<SmashRepairsCity />} />
           <Route path="/smash-repairs-melbourne" element={<SmashRepairsCity />} />
           <Route path="/smash-repairs-brisbane" element={<SmashRepairsCity />} />
