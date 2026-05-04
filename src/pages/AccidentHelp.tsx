@@ -12,11 +12,58 @@ const fireEvent = (eventName: string) => {
 };
 
 const LeadForm = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    phone: '',
+    email: '',
+    drivable: '',
+    details: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     fireEvent('form_submit');
-    // Implement actual form submission logic here
+    
+    try {
+      await fetch('https://services.leadconnectorhq.com/hooks/PLTsF5RFrXSBfkVPz0iA/webhook-trigger/d733975b-9ff5-40d0-afd7-ffa96ee77df6', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          source: window.location.pathname
+        }),
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.id]: e.target.value
+    }));
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="flex flex-col items-center justify-center py-8 text-center space-y-4 animate-fade-in">
+        <CheckCircle2 size={48} className="text-[#00A86B]" />
+        <h3 className="font-bebas text-[28px] text-[#1C1C1C] uppercase">Request Received</h3>
+        <p className="font-sans text-[16px] text-[#6B6B6B]">
+          Thank you, {formData.fullName.split(' ')[0]}. We'll call you back on {formData.phone} shortly.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <form className="space-y-4" onSubmit={handleSubmit}>
@@ -25,6 +72,8 @@ const LeadForm = () => {
         <input 
           id="fullName"
           type="text" 
+          value={formData.fullName}
+          onChange={handleChange}
           placeholder="Your full name" 
           className="w-full h-[52px] px-4 font-sans text-[16px] border border-[#E0E0E0] rounded-[8px] focus:outline-none focus:border-[#FF5C00] focus:ring-1 focus:ring-[#FF5C00] transition-colors"
           required
@@ -35,6 +84,8 @@ const LeadForm = () => {
         <input 
           id="phone"
           type="tel" 
+          value={formData.phone}
+          onChange={handleChange}
           placeholder="Best number to call you on" 
           className="w-full h-[52px] px-4 font-sans text-[16px] border border-[#E0E0E0] rounded-[8px] focus:outline-none focus:border-[#FF5C00] focus:ring-1 focus:ring-[#FF5C00] transition-colors"
           required
@@ -45,6 +96,8 @@ const LeadForm = () => {
         <input 
           id="email"
           type="email" 
+          value={formData.email}
+          onChange={handleChange}
           placeholder="Your email address" 
           className="w-full h-[52px] px-4 font-sans text-[16px] border border-[#E0E0E0] rounded-[8px] focus:outline-none focus:border-[#FF5C00] focus:ring-1 focus:ring-[#FF5C00] transition-colors"
           required
@@ -54,7 +107,8 @@ const LeadForm = () => {
         <label className="sr-only" htmlFor="drivable">Is your car drivable?</label>
         <select 
           id="drivable"
-          defaultValue=""
+          value={formData.drivable}
+          onChange={handleChange}
           className="w-full h-[52px] px-4 font-sans text-[16px] border border-[#E0E0E0] rounded-[8px] focus:outline-none focus:border-[#FF5C00] focus:ring-1 focus:ring-[#FF5C00] transition-colors bg-white appearance-none"
           required
         >
@@ -69,16 +123,19 @@ const LeadForm = () => {
         <textarea 
           id="details"
           rows={4}
+          value={formData.details}
+          onChange={handleChange}
           placeholder="e.g. I was rear-ended at a set of lights. The other driver admitted fault." 
           className="w-full py-3 px-4 font-sans text-[16px] border border-[#E0E0E0] rounded-[8px] focus:outline-none focus:border-[#FF5C00] focus:ring-1 focus:ring-[#FF5C00] transition-colors resize-none"
         ></textarea>
       </div>
       <button 
         type="submit"
-        className="w-full h-[56px] bg-[#FF5C00] text-white font-bebas text-[18px] tracking-[0.1em] rounded-[10px] uppercase hover:bg-[#E05200] transition-colors mt-2 flex items-center justify-center gap-2"
+        disabled={isSubmitting}
+        className="w-full h-[56px] bg-[#FF5C00] text-white font-bebas text-[18px] tracking-[0.1em] rounded-[10px] uppercase hover:bg-[#E05200] transition-colors mt-2 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
         aria-label="Submit Form"
       >
-        GET MY FREE ASSESSMENT &rarr;
+        {isSubmitting ? 'SUBMITTING...' : 'GET MY FREE ASSESSMENT →'}
       </button>
       <div className="flex flex-col gap-2 mt-4">
         {[
