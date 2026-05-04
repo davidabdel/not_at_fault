@@ -161,15 +161,15 @@ const NotAtFaultRepairs: React.FC = () => {
           </div>
           <div className="flex items-center gap-4">
             <a 
-              href="tel:1300000000" 
+              href="tel:0485044333" 
               onClick={() => fireEvent('phone_number_click')}
               className="hidden sm:flex items-center gap-2 font-bold text-[#1C1C1C] text-[18px]"
             >
               <Phone size={18} className="text-[#FF5C00]" />
-              1300 000 000
+              0485 044 333
             </a>
             <a 
-              href="tel:1300000000" 
+              href="tel:0485044333" 
               onClick={() => fireEvent('call_button_click')}
               className="bg-[#FF5C00] text-white px-5 py-2 rounded-[100px] font-bebas text-[16px] md:text-[18px] uppercase tracking-wide hover:bg-[#E05200] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1C1C1C]"
             >
