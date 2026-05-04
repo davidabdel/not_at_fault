@@ -33,30 +33,39 @@ const ScrollToTop = () => {
   return null;
 };
 
+const AppLayout = () => {
+  const { pathname } = useLocation();
+  const isLandingPage = pathname === '/not-at-fault-repairs';
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      {!isLandingPage && <Navbar />}
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/not-at-fault-repairs" element={<NotAtFaultRepairs />} />
+          <Route path="/not-at-fault-accident" element={<NotAtFaultAccident />} />
+          <Route path="/replacement-vehicle-after-accident" element={<ReplacementVehicle />} />
+          <Route path="/car-accident-claims-process" element={<ClaimsProcess />} />
+          <Route path="/who-pays-for-damages-not-at-fault" element={<WhoPaysDamages />} />
+          <Route path="/free-loan-car" element={<LoanCar />} />
+          <Route path="/insurance-claim-help" element={<InsuranceHelp />} />
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      {!isLandingPage && <Footer />}
+    </div>
+  );
+};
+
 export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/how-it-works" element={<HowItWorks />} />
-            <Route path="/not-at-fault-repairs" element={<NotAtFaultRepairs />} />
-            <Route path="/not-at-fault-accident" element={<NotAtFaultAccident />} />
-            <Route path="/replacement-vehicle-after-accident" element={<ReplacementVehicle />} />
-            <Route path="/car-accident-claims-process" element={<ClaimsProcess />} />
-            <Route path="/who-pays-for-damages-not-at-fault" element={<WhoPaysDamages />} />
-            <Route path="/free-loan-car" element={<LoanCar />} />
-            <Route path="/insurance-claim-help" element={<InsuranceHelp />} />
-            <Route path="/blog" element={<BlogIndex />} />
-            <Route path="/blog/:slug" element={<BlogPostPage />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <AppLayout />
     </Router>
   );
 }
