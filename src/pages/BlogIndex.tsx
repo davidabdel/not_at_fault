@@ -3,13 +3,25 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, ChevronRight, Search, Phone } from 'lucide-react';
 import { PageHeader, Section, CTASection } from '../components/UI';
 import { BLOG_POSTS, PHONE_NUMBER } from '../constants';
 
 const BlogIndex: React.FC = () => {
+  useEffect(() => {
+    document.title = "Accident Claims Blog & Resources | Not At Fault Claims";
+    
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', "Read the latest guides, tips, and resources about not at fault car accidents, smash repairs, and your rights as an Australian driver.");
+  }, []);
+
   const [activeCategory, setActiveCategory] = useState<string>('All');
   
   const categories = ['All', 'Insurance Claims', 'Repair Process', 'Know Your Rights', 'FAQs', 'Real Stories'];

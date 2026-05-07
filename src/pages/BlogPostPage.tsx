@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { Calendar, Clock, ChevronLeft, ChevronRight, Phone, Share2, Facebook, Twitter, Linkedin, FacebookIcon } from 'lucide-react';
@@ -13,6 +13,20 @@ import { BLOG_POSTS, PHONE_NUMBER } from '../constants';
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = BLOG_POSTS.find(p => p.slug === slug);
+
+  useEffect(() => {
+    if (post) {
+      document.title = `${post.title} | Not At Fault Claims`;
+      
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        document.head.appendChild(metaDescription);
+      }
+      metaDescription.setAttribute('content', post.excerpt);
+    }
+  }, [post]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
