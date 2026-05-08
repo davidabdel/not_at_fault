@@ -354,6 +354,78 @@ Don't touch your own insurance policy until you've spoken to us. You may be enti
 
 Call **0485 044 333** or get started online. We'll tell you exactly where you stand — no cost, no obligation.
 
+  },
+  {
+    id: "14",
+    title: "Not at Fault Accident Repairs in Bankstown — What Sydney's South West Drivers Need to Know",
+    slug: "not-at-fault-accident-repairs-bankstown-nsw",
+    category: "Know Your Rights",
+    date: "May 8, 2026",
+    readTime: "6 min read",
+    image: "/bankstown_accident_repairs.png",
+    excerpt: "Had a car accident in Bankstown that wasn't your fault? You don't pay a cent. No excess, free loan car, and someone else handles the whole thing. Here's how.",
+    content: `Bankstown is one of those suburbs that never really slows down. The Hume Highway feeds traffic from all directions, Chapel Road is a constant stream of buses, delivery vans and commuters, and the area around Bankstown Central sees the kind of stop-start congestion that makes minor accidents almost inevitable.
+
+If you've been driving in Bankstown or the surrounding suburbs — Yagoona, Greenacre, Punchbowl, Condell Park, Bass Hill — long enough, chances are you've already had at least one close call. And if you've been unlucky enough to be hit by someone who wasn't paying attention, you're probably trying to figure out what happens next.
+
+Here's what you need to know.
+
+## You Don't Have to Pay for Someone Else's Mistake
+
+This is the part most people miss. When another driver causes the accident, the cost of repairing your car is their problem — or more precisely, their insurer's problem. You're not supposed to pay an excess. You're not supposed to dip into savings. You're not supposed to go without a car while yours gets fixed.
+
+Under NSW law, when you're not at fault you're entitled to:
+
+* **Full repair of your vehicle at no cost to you**
+* **A free loan car for the entire duration of repairs**
+* **Your choice of repairer** — you are not obligated to use whoever the at-fault driver's insurer points you toward
+* **Someone to manage the whole claim** so you're not spending your evenings on hold with insurance companies
+
+Most drivers in Bankstown don't know all of this. And the insurance companies certainly aren't rushing to tell them.
+
+## Why Bankstown Drivers Are Particularly Vulnerable
+
+There's a particular issue in inner south-western Sydney that's worth being upfront about — the rate of uninsured or underinsured drivers is higher here than in many other parts of the city.
+
+It's not a judgement, it's just a reality. And it matters because when the driver who hit you doesn't have insurance, the path to getting your car fixed isn't as straightforward as it would otherwise be.
+
+But it's not a dead end either.
+
+Depending on your own comprehensive policy, there may be provisions that let you claim repairs without paying excess even when the other driver is uninsured. In other cases, there are formal dispute pathways through the Australian Financial Complaints Authority that can be pursued without going to court. The key is knowing those options exist and moving quickly — not assuming you're stuck.
+
+If an uninsured driver hit you, call us before you do anything else.
+
+## The Problem With Calling Your Own Insurer First
+
+It's the instinct everyone has. You've been paying premiums for years, the accident wasn't your fault, so you call your insurer and let them sort it out.
+
+Here's what actually happens. Your insurer opens a claim on your policy. It's now on your insurance record. When renewal comes around, that claim — even a not-at-fault one — can be used to justify a higher premium. Some insurers are better than others about this, but it's a risk you're taking unnecessarily.
+
+When you go through a not-at-fault specialist instead, your own policy stays completely untouched. The claim is managed against the at-fault driver's insurer. Your record is clean. Your premium doesn't move.
+
+## Bankstown Roads Where Accidents Happen
+
+* **Chapel Road and the Bankstown CBD** — the volume of buses, pedestrians and vehicles turning across traffic creates constant friction. Rear-end collisions at lights are the most common type here.
+* **The Hume Highway through Yagoona and Bass Hill** — long straight sections with fast-moving traffic and frequent merges. Side swipes and late braking incidents are common, particularly around the Greenacre and Bankstown Airport area.
+* **Stacey Street and Marion Street** — two of the busiest arterials through central Bankstown, both dealing with heavy volumes and poor sight lines at several intersections.
+* **Rookwood Road toward Greenacre** — a stretch that sees a lot of through traffic cutting between the M5 and Parramatta Road, often moving faster than the local streets were designed for.
+
+If your accident happened anywhere in the Bankstown local government area — including Canterbury, Campsie, Lakemba, Wiley Park, or Revesby — we can help.
+
+## What the Process Looks Like
+
+It's simpler than most people expect.
+
+1. **You contact us** — by phone or online. We ask you a few basic questions about the accident and assess your eligibility.
+2. We arrange your loan car. We manage the insurer communications and the repair.
+3. When your car is ready, you get it back in pre-accident condition.
+
+You pay nothing. You deal with no one. You just get back to your life.
+
+## Had an Accident in Bankstown?
+
+Don't go through your own insurer before speaking to us. Call **0485 044 333** or get started online — we'll tell you exactly what you're entitled to in plain English, no obligation.
+
 **Not your fault. Not your problem.**`
   }
 ];
