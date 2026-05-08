@@ -218,5 +218,78 @@ export const BLOG_POSTS: BlogPost[] = [
     image: "/blog/blog_who_pays_repairs.png",
     excerpt: "Who pays for repairs if I'm not at fault? Learn how repair costs are covered in Australia and how not-at-fault claims work.",
     content: `If you've been involved in a car accident that wasn't your fault, one of the biggest concerns is cost. Naturally, you'll ask: **"Who pays for repairs if I'm not at fault?"**\n\nThe good news is that **you generally don't have to pay for repairs yourself**. According to Not At Fault Claims, the **at-fault driver (or their insurer)** is responsible for covering the cost of repairs, along with other related expenses.\n\nLet's break down exactly how this works in Australia so you know what to expect.\n\n## **⚖️ Understanding Fault in Car Accidents**\n\nBefore determining who pays, it's important to understand how fault is established.\n\n### **How Fault Is Determined**\n\nFault is typically decided based on:\n* Road rules\n* Evidence from the scene\n* Witness statements\n* Police reports (if applicable)\n\nInsurance companies review this information to determine liability.\n\n## **✅ Who Pays for Repairs If I'm Not at Fault?**\n\nIn most cases, the answer is simple: **the at-fault driver pays**.\n\n### **At-Fault Driver Responsibility**\n\nWhen another driver causes an accident, they are legally responsible for:\n* Repairing your vehicle\n* Covering towing costs\n* Paying for related damages\n\nThis responsibility usually falls on their insurance provider.\n\n### **Role of Insurance Companies**\n\nThe at-fault driver's insurer typically:\n* Covers repair costs\n* Deals with repairers\n* Handles payments directly\n\nIf you go through your own insurer, they may initially pay for repairs and then recover costs from the at-fault party.\n\n## **⚙️ How Not-at-Fault Claims Work**\n\nNot-at-fault claims offer a streamlined way to handle repairs without unnecessary hassle.\n\n### **Step-by-Step Claims Process**\n\n1. Report the accident\n2. Provide evidence and driver details\n3. Confirm fault\n4. Arrange repairs\n5. Recover costs from the at-fault driver\n\nServices like Not At Fault Claims can manage this entire process on your behalf.\n\n## **🚘 Using Not-at-Fault Claims Services**\n\nMany drivers choose to use specialist services instead of relying on their insurer.\n\n### **Benefits of These Services**\n\nCompanies like Not At Fault Claims may offer:\n* No upfront repair costs\n* Replacement vehicles\n* Faster repair approvals\n* Direct cost recovery from the at-fault party\n\nThis can simplify the process significantly.\n\n## **🚫 What Happens If the Other Driver Is Uninsured?**\n\nThis situation can be more complicated—but not hopeless.\n\n### **Recovery Options**\n\nIf the at-fault driver is uninsured:\n* You may still recover costs directly from them\n* Legal action may be required\n* Some services assist with recovery\n\nYour own insurance policy may also provide coverage, depending on your level of protection.\n\n## **⚠️ What If Fault Is Disputed?**\n\nDisputes can delay the repair process.\n\n### **Investigation Process**\n\nWhen fault is unclear:\n* Insurers review all evidence\n* Statements are collected\n* Liability is negotiated\n\nDuring this time, you may need to wait before repairs are approved—or pay upfront temporarily.\n\n## **💰 Do You Have to Pay Anything Upfront?**\n\nIn many not-at-fault cases, you won't need to pay anything—but there are exceptions.\n\n### **When Costs May Apply**\n\nYou might pay upfront if:\n* Fault hasn't been confirmed\n* The at-fault driver is unidentified\n* You go through your insurer and pay excess initially\n\nHowever, these costs are often reimbursed once liability is established.\n\n## **📸 Importance of Evidence**\n\nStrong evidence makes all the difference.\n\n### **What to Collect**\n\nAfter an accident, gather:\n* Photos of damage and surroundings\n* Driver details\n* Witness contact information\n\nThis helps prove fault and ensures you don't end up paying for repairs unnecessarily.\n\n## **⚠️ Common Mistakes to Avoid**\n\n### **Admitting Fault**\n\nEven a simple apology can be interpreted as admitting liability. Always let insurers determine fault.\n\n### **Not Reporting the Accident**\n\nFailing to report promptly can:\n* Delay repairs\n* Complicate claims\n* Affect your eligibility for services\n\n## **❓ FAQs: Who pays for repairs if I'm not at fault?**\n\n### **1. Will I always avoid paying for repairs?**\n\nYes, if the other driver is clearly at fault and identified.\n\n### **2. Can I choose my own repairer?**\n\nOften yes, especially when using not-at-fault claims services.\n\n### **3. What if the other driver denies fault?**\n\nAn investigation will determine liability based on evidence.\n\n### **4. Do I need to involve my insurer?**\n\nNot always—you can use services like Not At Fault Claims instead.\n\n### **5. How long do repairs take?**\n\nIt depends on damage severity, but claims services can speed up the process.\n\n### **6. Can I get a replacement car while mine is being repaired?**\n\nYes, if you're not at fault, you may be entitled to one.\n\n## **🏁 Conclusion**\n\nSo, **who pays for repairs if I'm not at fault?** In most Australian cases, **the at-fault driver—or their insurer—covers the cost**, not you.\n\nBy understanding your rights and using services like Not At Fault Claims, you can avoid unnecessary expenses and get back on the road faster.\n\nThe key is simple: gather evidence, act quickly, and know your options. That way, you won't be left paying for someone else's mistake.\n\n---\n\n## **Need Your Car Repaired for Free?**\n\nIf you're dealing with an accident that wasn't your fault, we can help you bypass your insurer, handle the other party, and get your car repaired at no cost to you.\n\n**[Start Your Claim Now](/contact)** or call us today on **[0485 044 333](tel:0485044333)**.`
+  },
+  {
+    id: "12",
+    title: "Not at Fault Accident Repairs in Parramatta — What You're Actually Entitled To",
+    slug: "not-at-fault-accident-repairs-parramatta",
+    category: "Know Your Rights",
+    date: "May 8, 2026",
+    readTime: "6 min read",
+    image: "/parramatta_accident_repairs.png",
+    excerpt: "Had a car accident in Parramatta that wasn't your fault? Here's exactly what you're entitled to — no excess, free loan car, and repairs at zero cost to you.",
+    content: `If you've just been in a accident around Parramatta and it wasn't your fault, the first thing most people do is call their insurer. That's usually the wrong move — and it ends up costing them.
+
+Here's the thing. When someone else causes the accident, their insurer is responsible for the damage to your car. You're not supposed to pay a cent. No excess. No out-of-pocket costs. And in most cases, you're entitled to a free loan car while yours gets fixed.
+
+The problem is the insurance companies — both yours and theirs — don't exactly go out of their way to tell you that.
+
+## Parramatta's Roads Are Busy. Accidents Happen.
+
+Church Street. Victoria Road. Parramatta Road. The M4 on-ramp. If you drive in and around Parramatta regularly, you already know how chaotic it can get — merge lanes that disappear, school zones that catch people off guard, and the constant pressure of Western Sydney traffic moving in every direction.
+
+Rear-end collisions at lights on Church Street. Side swipes in the Westfield carpark. Someone running a red at the James Ruse Drive intersection. These aren't rare events. They happen every day, and when they do, most drivers have no idea what they're actually entitled to.
+
+## What You're Entitled To After a Not-at-Fault Accident in NSW
+
+Let's keep this simple:
+
+### 1. Your car repaired at no cost to you
+If the other driver is at fault and they're insured, their insurer covers your repairs. You don't pay excess. You don't claim on your own policy. The damage gets fixed and the bill goes to them.
+
+### 2. A free loan car while yours is being repaired
+You don't have to borrow your mate's ute or arrange your own hire car. As a not-at-fault driver in NSW, you're entitled to a like-for-like replacement vehicle — at no cost — for the entire time your car is in the shop.
+
+### 3. Someone to handle the whole process for you
+You don't need to spend hours on hold with insurers, chase the other driver, or figure out the paperwork yourself. A specialist not-at-fault claims service handles all of it — the assessment, the insurer communications, the repair, and the loan car.
+
+## The Mistake Most Parramatta Drivers Make
+
+**They call their own insurer first.**
+
+It feels like the right thing to do. You've been paying premiums for years, so you assume your insurer is there to help. And they will — but they'll also open a claim on your own policy, which can affect your record and sometimes your premium at renewal, even if you were 100% not at fault.
+
+When you go through a not-at-fault specialist instead, none of that happens. Your own policy stays untouched. The at-fault driver's insurer wears the cost. You stay out of it completely.
+
+## What If the Other Driver Says It Was Your Fault?
+
+This happens more often than you'd think. Someone causes an accident, then suddenly their story changes when the adrenaline wears off.
+
+Don't argue at the scene. Just collect what you can — their licence plate, their insurance details, photos of the damage and the position of both cars, and the names of any witnesses. If the police attend, get the event number.
+
+A claims specialist can work through disputed liability situations. It's not always straightforward, but having the right evidence from the scene makes an enormous difference.
+
+## What If They're Not Insured?
+
+It's a genuine problem in NSW and it does complicate things. But it doesn't necessarily mean you're stuck. Depending on your own comprehensive policy and the circumstances, there may still be pathways to getting your car repaired without footing the full bill yourself.
+
+Call a specialist before you assume you have no options. The answer might surprise you.
+
+## How It Works With Not At Fault Claims
+
+We keep it straightforward:
+* **Call us or submit online** — takes about five minutes
+* **We handle everything** — insurer contact, repair coordination, loan car arranged
+* **Drive away repaired** — your car comes back to you. Zero cost.
+
+There's no excess, no paperwork headaches, and no impact on your own insurance record.
+
+## Had an Accident in Parramatta?
+
+If it wasn't your fault, don't go through your own insurer before speaking to us. You may be giving up entitlements you didn't know you had.
+
+Call **0485 044 333** or submit your details online and we'll tell you exactly where you stand — no cost, no obligation.
+
+**Not your fault. Not your problem.**`
   }
 ];
