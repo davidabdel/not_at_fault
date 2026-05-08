@@ -36,7 +36,9 @@ const Contact: React.FC = () => {
         // Google Ads Conversion Tracking
         if (typeof (window as any).gtag === 'function') {
           (window as any).gtag('event', 'conversion', {
-            'send_to': 'AW-18137912228/0_ZxCLv1_KYcEKSn6shD'
+            'send_to': 'AW-18137912228/a3QDCJCv3qkcEKSn6shD',
+            'value': 1.0,
+            'currency': 'AUD'
           });
         }
       } else {

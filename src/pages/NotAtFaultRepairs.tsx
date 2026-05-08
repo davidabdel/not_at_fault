@@ -11,7 +11,9 @@ const fireEvent = (eventName: string) => {
     
     if (eventName === 'form_submit') {
       (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-18137912228/0_ZxCLv1_KYcEKSn6shD'
+        'send_to': 'AW-18137912228/a3QDCJCv3qkcEKSn6shD',
+        'value': 1.0,
+        'currency': 'AUD'
       });
     }
   }
