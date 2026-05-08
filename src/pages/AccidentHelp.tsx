@@ -8,6 +8,12 @@ const SmoothScroll = (targetId: string) => {
 const fireEvent = (eventName: string) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', eventName);
+    
+    if (eventName === 'form_submit') {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18137912228/0_ZxCLv1_KYcEKSn6shD'
+      });
+    }
   }
 };
 
