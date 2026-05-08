@@ -33,6 +33,12 @@ const Contact: React.FC = () => {
 
       if (response.ok) {
         setSubmitted(true);
+        // Google Ads Conversion Tracking
+        if (typeof (window as any).gtag === 'function') {
+          (window as any).gtag('event', 'conversion', {
+            'send_to': 'AW-18137912228/0_ZxCLv1_KYcEKSn6shD'
+          });
+        }
       } else {
         console.error('Webhook submission failed');
         alert('Something went wrong. Please try calling us directly.');
