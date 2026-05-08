@@ -291,5 +291,69 @@ If it wasn't your fault, don't go through your own insurer before speaking to us
 Call **0485 044 333** or submit your details online and we'll tell you exactly where you stand — no cost, no obligation.
 
 **Not your fault. Not your problem.**`
+  },
+  {
+    id: "13",
+    title: "Not at Fault Accident Repairs in Liverpool NSW — Know What You're Owed",
+    slug: "not-at-fault-accident-repairs-liverpool-nsw",
+    category: "Know Your Rights",
+    date: "May 8, 2026",
+    readTime: "5 min read",
+    image: "/liverpool_accident_repairs.png",
+    excerpt: "Been in a car accident in Liverpool that wasn't your fault? You're entitled to free repairs, a free loan car and zero excess. Here's exactly how it works in NSW.",
+    content: `Liverpool is one of the busiest parts of South Western Sydney. The Hume Highway cuts straight through it, Hoxton Park Road feeds traffic from half a dozen suburbs, and the intersection around Liverpool CBD handles more volume than most people outside the area realise. If you spend any time driving around Liverpool, Cabramatta, Casula, Prestons, or Moorebank, you know that accidents are not a matter of if — they're a matter of when.
+
+So when one happens to you, and it wasn't your fault, what happens next matters a lot.
+
+## The First Thing Most People Get Wrong
+
+You pull over, you're shaken, and the first thing you do is call your insurer. It feels like the right move. You've been paying premiums for years and this is exactly the kind of situation insurance exists for.
+
+But here's the problem. When the accident wasn't your fault, going through your own insurer is often the worst thing you can do. You open a claim on your own policy. It goes on your record. And at renewal time — even if you were completely innocent — some insurers will use it to justify a premium increase.
+
+There's a better way. And most Liverpool drivers don't know it exists.
+
+## What You're Actually Entitled To
+
+When another driver causes the accident, their insurer is responsible for the damage to your car. That means:
+
+* **No excess.** You don't pay anything upfront. The cost of repairs is recovered from the at-fault driver's insurer, not from your own pocket.
+* **A free loan car.** While your car is being fixed, you're entitled to a replacement vehicle at no cost. Not a courtesy car from a smash repairer that you have to argue over — a proper like-for-like loan car delivered to you, covered by the other party's insurer.
+* **Your own choice of repairer.** In NSW, you have the legal right to choose who fixes your car. Your insurer or the other driver's insurer cannot force you into their preferred repairer network. That matters because insurer-preferred repairers are often working to an insurance budget, not to the standard your car deserves.
+* **Someone to handle the whole thing.** A not-at-fault specialist manages the claim from start to finish — the assessment, the paperwork, the insurer communications, the loan car, and the repair. You don't spend hours on hold. You get on with your life.
+
+## Liverpool Roads Worth Mentioning
+
+If you've been in an accident at any of these spots, you're far from alone:
+* **The Hume Highway and Cumberland Highway interchange near Casula** is a constant pinch point. Merging traffic from the motorway mixed with local trucks is a recipe for rear-end collisions, particularly during peak hour.
+* **Hoxton Park Road through Prestons and Hinchinbrook** has heavy school and commuter traffic and a number of poorly timed intersections where inattentive drivers run late yellows.
+* **Memorial Avenue in Liverpool CBD** — particularly around the Westfield end — sees a high volume of parking-related scrapes and reversing accidents.
+* **Campbelltown Road heading south toward Ingleburn** catches a lot of side-impact accidents at the roundabouts and unmarked intersections that catch out drivers unfamiliar with the area.
+
+If your accident happened anywhere around Liverpool, Cabramatta, Fairfield, Casula, Prestons, Moorebank, or Warwick Farm, we can help.
+
+## What About Uninsured Drivers?
+
+South Western Sydney has a higher proportion of uninsured or underinsured drivers than some other parts of Sydney. It's a reality of the area and it does make not-at-fault claims more complicated — but it doesn't necessarily mean you're out of options.
+
+Depending on your own comprehensive policy, there may be provisions that still allow you to claim repairs without paying your excess, even when the at-fault driver isn't insured. And in some cases, the at-fault driver can be pursued directly.
+
+Before you assume you're stuck, call a specialist. The picture is often better than you think.
+
+## How We Handle It
+
+1. **You call or submit online.**
+2. We assess the situation, confirm your eligibility, arrange your loan car, and manage the repair process from end to end.
+3. When your car is ready, you get it back in pre-accident condition. The bill goes to the at-fault insurer. You pay nothing.
+
+Three steps. Zero cost to you.
+
+## Had an Accident in Liverpool or South Western Sydney?
+
+Don't touch your own insurance policy until you've spoken to us. You may be entitled to a lot more than you realise.
+
+Call **0485 044 333** or get started online. We'll tell you exactly where you stand — no cost, no obligation.
+
+**Not your fault. Not your problem.**`
   }
 ];
