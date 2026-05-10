@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Phone, ArrowDown, ShieldCheck, Car, Wrench, CheckCircle2, ChevronDown, MapPin } from 'lucide-react';
+import SEO from '../components/SEO';
+import { PHONE_NUMBER } from '../constants';
 
 const SmoothScroll = (targetId: string) => {
   document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
@@ -189,42 +191,18 @@ const SmashRepairsCity: React.FC = () => {
     ? city.charAt(0).toUpperCase() + city.slice(1).toLowerCase() 
     : 'Sydney';
 
-  useEffect(() => {
-    document.title = `Smash Repairs ${cityName} — Not At Fault? Zero Cost | Not at Fault Claims`;
-    
-    // Meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', `Expert smash repairs in ${cityName}. Not at fault? We handle repairs, insurers & your free loan car. No excess. Zero cost. Call 1800 407 911.`);
-
-    // Meta robots
-    let metaRobots = document.querySelector('meta[name="robots"]');
-    if (!metaRobots) {
-      metaRobots = document.createElement('meta');
-      metaRobots.setAttribute('name', 'robots');
-      document.head.appendChild(metaRobots);
-    }
-    metaRobots.setAttribute('content', "noindex, nofollow");
-
-    // GA4 Pageview
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'page_view', {
-        page_path: window.location.pathname,
-        page_title: `Smash Repairs ${cityName} — Not At Fault? Zero Cost | Not at Fault Claims`
-      });
-    }
-
-    return () => {
-      metaRobots?.setAttribute('content', "index, follow");
-    };
-  }, [cityName]);
-
   return (
     <div className="bg-white min-h-screen relative font-sans pb-[56px] md:pb-0">
+      <SEO 
+        title={`Not At Fault Claims ${cityName} | Zero Cost Accident Repairs`}
+        description={`Expert smash repairs in ${cityName}. Not at fault? We handle repairs, insurers & your free loan car. No excess. Zero cost. Call ${PHONE_NUMBER}.`}
+        canonical={`https://notatfaultclaims.com.au${window.location.pathname}`}
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'Smash Repairs', item: 'https://notatfaultclaims.com.au/smash-repairs' },
+          { name: cityName, item: `https://notatfaultclaims.com.au${window.location.pathname}` }
+        ]}
+      />
       {/* SECTION 1 — MINIMAL HEADER */}
       <header className="sticky top-0 z-50 bg-white border-b border-[#E0E0E0] py-4">
         <div className="container mx-auto px-4 flex items-center justify-between">
@@ -234,15 +212,15 @@ const SmashRepairsCity: React.FC = () => {
           </div>
           <div className="flex items-center gap-4">
             <a 
-              href="tel:0485044333" 
+              href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
               onClick={() => fireEvent('phone_number_click')}
               className="hidden sm:flex items-center gap-2 font-bold text-[#1C1C1C] text-[18px]"
             >
               <Phone size={18} className="text-[#FF5C00]" />
-              1800 407 911
+              {PHONE_NUMBER}
             </a>
             <a 
-              href="tel:0485044333" 
+              href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
               onClick={() => fireEvent('call_button_click')}
               className="bg-[#FF5C00] text-white px-5 py-2 rounded-[100px] font-bebas text-[16px] md:text-[18px] uppercase tracking-wide hover:bg-[#E05200] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1C1C1C]"
             >
@@ -271,12 +249,12 @@ const SmashRepairsCity: React.FC = () => {
             </p>
             
             <a 
-              href="tel:0485044333" 
+              href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
               onClick={() => fireEvent('call_button_click')}
               className="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-[#FF5C00] text-white h-[56px] px-8 rounded-[100px] font-bebas text-[16px] tracking-[0.1em] hover:bg-[#E05200] transition-colors mb-4 uppercase md:animate-none animate-[pulse_2s_infinite]"
             >
               <Phone size={20} />
-              CALL US NOW — 1800 407 911
+              CALL US NOW — {PHONE_NUMBER}
             </a>
             
             <button 
@@ -370,11 +348,11 @@ const SmashRepairsCity: React.FC = () => {
 
           <div className="text-center">
             <a 
-              href="tel:0485044333" 
+              href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
               onClick={() => fireEvent('call_button_click')}
               className="inline-flex items-center justify-center bg-[#FF5C00] text-white h-[56px] px-8 rounded-[100px] font-bebas text-[16px] tracking-[0.1em] hover:bg-[#E05200] transition-colors uppercase"
             >
-              CALL US NOW — 1800 407 911
+              CALL US NOW — {PHONE_NUMBER}
             </a>
           </div>
         </div>
@@ -446,11 +424,11 @@ const SmashRepairsCity: React.FC = () => {
             Call us now — local experts, free loan car, and if it wasn't your fault, you pay absolutely nothing.
           </p>
           <a 
-            href="tel:0485044333" 
+            href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
             onClick={() => fireEvent('phone_number_click')}
             className="block font-bebas text-[52px] text-white mb-8 hover:opacity-80 transition-opacity"
           >
-            1800 407 911
+            {PHONE_NUMBER}
           </a>
           <button 
             onClick={() => SmoothScroll('form-section')}
@@ -481,7 +459,7 @@ const SmashRepairsCity: React.FC = () => {
       {/* STICKY BOTTOM BAR (MOBILE ONLY) */}
       <div className="md:hidden fixed bottom-0 left-0 w-full z-[999] bg-[#FF5C00] h-[56px]">
         <a 
-          href="tel:0485044333" 
+          href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
           onClick={() => fireEvent('call_button_click')}
           className="w-full h-full flex items-center justify-center gap-2 text-white font-bebas text-[20px] tracking-[0.05em] uppercase"
         >

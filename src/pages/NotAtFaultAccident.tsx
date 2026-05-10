@@ -1,9 +1,20 @@
 import React from 'react';
 import { PageHeader, Section, CTASection } from '../components/UI';
+import SEO from '../components/SEO';
 
 const NotAtFaultAccident: React.FC = () => {
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="Not At Fault Accident Rights Australia | What To Do After A Crash"
+        description="Had a car accident that wasn't your fault? Know your legal rights in Australia. Get a free loan car, zero excess, and manufacturer-quality repairs."
+        canonical="https://notatfaultclaims.com.au/not-at-fault-accident"
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'Not At Fault Accident', item: 'https://notatfaultclaims.com.au/not-at-fault-accident' }
+        ]}
+      />
+
       <PageHeader 
         title="Not At Fault Accident" 
         subtitle="Understanding your rights and what to do when you're involved in a not at fault accident in Australia." 

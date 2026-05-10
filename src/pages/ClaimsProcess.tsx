@@ -1,9 +1,20 @@
 import React from 'react';
 import { PageHeader, Section, CTASection } from '../components/UI';
+import SEO from '../components/SEO';
 
 const ClaimsProcess: React.FC = () => {
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="Car Accident Claims Process Guide Australia | Not At Fault Help"
+        description="Learn the step-by-step car accident claims process in Australia. Find out how to get repairs and a loan car at zero cost when you're not at fault."
+        canonical="https://notatfaultclaims.com.au/car-accident-claims-process"
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'Claims Process', item: 'https://notatfaultclaims.com.au/car-accident-claims-process' }
+        ]}
+      />
+
       <PageHeader 
         title="Car Accident Claims Process" 
         subtitle="A step-by-step guide to the car accident claims process when you are not at fault." 

@@ -23,6 +23,7 @@ import {
   ChevronDown
 } from 'lucide-react';
 import { Section } from '../components/UI';
+import SEO from '../components/SEO';
 import { HOME_FAQS, PHONE_NUMBER } from '../constants';
 
 const Home: React.FC = () => {
@@ -57,8 +58,8 @@ const Home: React.FC = () => {
                   AUSTRALIA'S NOT-AT-FAULT SPECIALISTS
                 </p>
                 <h1 className="flex flex-col mb-8 font-bebas tracking-tight leading-[0.85] uppercase">
-                  <span className="text-[54px] md:text-[76px] lg:text-[90px] text-brand-charcoal">NOT AT FAULT ACCIDENT</span>
-                  <span className="text-[54px] md:text-[76px] lg:text-[90px] text-brand-orange mt-2">CLAIMS AUSTRALIA</span>
+                  <span className="text-[54px] md:text-[76px] lg:text-[90px] text-brand-charcoal">NOT AT FAULT CLAIMS</span>
+                  <span className="text-[54px] md:text-[76px] lg:text-[90px] text-brand-orange mt-2">AUSTRALIA</span>
                 </h1>
                 <p className="text-[18px] md:text-[20px] text-brand-mid-grey max-w-[540px] mb-10 leading-relaxed font-sans">
                   No excess. No hassle. Free loan car. We manage the entire insurance claim and smash repair process for not-at-fault drivers across Australia — at zero cost to you.
@@ -256,77 +257,174 @@ const Home: React.FC = () => {
             </div>
           ))}
         </div>
-      </Section>
+      </Section>      {/* Comprehensive SEO Content Section */}
+      <SEO 
+        title="Not At Fault Claims Australia | Accident Replacement Vehicle Help"
+        description="Had an accident that wasn’t your fault? We help Australians with not at fault claims, replacement vehicles and insurer communication. No excess, zero cost."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Not At Fault Claims Australia",
+          "url": "https://notatfaultclaims.com.au",
+          "logo": "https://notatfaultclaims.com.au/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+61-1800-407-911",
+            "contactType": "customer service",
+            "areaServed": "AU",
+            "availableLanguage": "en"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://notatfaultclaims.com.au"
+          },
+          "faq": {
+            "@type": "FAQPage",
+            "mainEntity": HOME_FAQS.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          }
+        }}
+      />
 
-      {/* Comprehensive Guide Section */}
       <Section className="bg-brand-light-grey py-24 border-t border-gray-100">
-        <div className="max-w-[800px] mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl text-brand-charcoal font-bebas mb-8 uppercase tracking-wide text-center">Understanding Not At Fault Accident Claims in Australia</h2>
-          <div className="prose prose-lg max-w-none font-sans text-brand-charcoal text-[16px] md:text-[18px] leading-relaxed space-y-6">
+        <div className="max-w-[900px] mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl text-brand-charcoal font-bebas mb-8 uppercase tracking-wide text-center">Not At Fault Claims Australia: The Ultimate Guide to Your Rights After an Accident</h2>
+          
+          <div className="prose prose-lg max-w-none font-sans text-brand-charcoal text-[16px] md:text-[17px] leading-relaxed space-y-8">
+            <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm mb-10">
+              <p className="text-[18px] font-medium text-brand-charcoal leading-relaxed mb-0">
+                Being involved in a <strong className="text-brand-orange">not at fault car accident</strong> is a jarring experience. One moment you're driving safely, and the next, your vehicle is damaged, your schedule is ruined, and you're faced with a mountain of insurance paperwork. In Australia, however, you have powerful legal rights that ensure you shouldn't be out of pocket for someone else's mistake.
+              </p>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bebas text-brand-charcoal tracking-wide uppercase mt-12 mb-6 border-l-4 border-brand-orange pl-4">What Exactly Is a Not At Fault Claim?</h2>
             <p>
-              Being involved in a motor vehicle accident is a highly stressful experience, even more so when the collision was completely out of your control. Suddenly, you are faced with a damaged vehicle, potential time off work, the hassle of organizing alternative transport, and the daunting prospect of dealing with insurance companies. Understanding your rights and the avenues available to you is crucial. In Australia, if you are the innocent party in a collision, you have specific legal entitlements under common law. This comprehensive guide explains exactly what a not at fault accident claim is, who qualifies for this specialized service, and why choosing an independent accident management company is often a far better option than going straight to your own insurance provider.
+              A <strong>not at fault claim</strong> is a process where the innocent party in a motor vehicle collision recovers all losses directly from the responsible party (the at-fault driver or their insurer). Under Australian Common Law, the principle of "restitution" applies. This means the person who caused the damage is legally obligated to return your property to the exact state it was in before the accident occurred.
             </p>
-            <h3 className="text-2xl font-bold mt-12 mb-4">What Is a Not At Fault Accident Claim?</h3>
             <p>
-              When you are involved in a car accident where the other driver is legally responsible for causing the crash, you are considered the "not at fault" driver. Under Australian common law, the innocent party has the right to be placed back into the position they were in before the accident occurred. This means you are legally entitled to have your vehicle repaired to its pre-accident condition and to be provided with a comparable replacement vehicle while yours is off the road, all without incurring any financial loss.
-            </p>
-            <p>
-              A "not at fault accident claim" refers to the process of exercising these rights through a specialized accident management service, rather than lodging a traditional claim through your own comprehensive insurance policy. When you use a service like Not At Fault Claims, we step in as your dedicated advocate. We manage the entire process from start to finish. Our team of experts will organize the recovery of your damaged vehicle, provide you with an immediate accident replacement car (often a "like-for-like" vehicle similar to your own), and oversee the high-quality repair of your car at an approved smash repair facility.
-            </p>
-            <p>
-              The most significant advantage of this process is that the costs of the repairs, the loan car, and any associated administrative fees are recovered directly from the at-fault driver's insurance company. Because liability rests entirely with the other party, their insurer is legally obligated to cover these damages. For you, the customer, this means the entire service is provided completely free of charge. You will not have to pay an insurance excess, there are no hidden fees, and you won't have to suffer the financial strain of being left without a vehicle while yours is repaired. We shoulder the burden of dealing with the insurance companies, leaving you free to get on with your life.
+              Unlike a standard insurance claim where you deal with your own provider and potentially pay an excess, a specialized not at fault service bypasses your policy entirely. We act as your advocate, managing the <strong className="text-brand-orange">not at fault accident claims</strong> process to ensure you receive your full entitlements without the usual stress or financial burden.
             </p>
 
-            <h3 className="text-2xl font-bold mt-12 mb-4">Who Qualifies for This Service?</h3>
+            <h2 className="text-3xl md:text-4xl font-bebas text-brand-charcoal tracking-wide uppercase mt-12 mb-6 border-l-4 border-brand-orange pl-4">Your Legal Entitlements as an Innocent Driver</h2>
             <p>
-              Qualifying for a zero-cost not at fault smash repair and loan car service is a straightforward process, but it does require certain criteria to be met to ensure a successful recovery of costs from the liable party's insurer.
+              Many Australians are unaware of the breadth of their rights after an accident. If you are 100% not at fault, you are entitled to:
+            </p>
+            <ul className="list-disc pl-6 space-y-3">
+              <li><strong>Zero Excess:</strong> You should never have to pay a cent of your insurance excess.</li>
+              <li><strong>Choice of Repairer:</strong> You have the legal right to choose where your car is fixed, regardless of what an insurer tells you.</li>
+              <li><strong>Genuine Parts:</strong> You are entitled to have your car repaired with genuine manufacturer parts to maintain safety and resale value.</li>
+              <li><strong>Accident Replacement Car:</strong> You are entitled to a <Link to="/replacement-vehicle-after-accident" className="text-brand-orange hover:underline font-bold">replacement vehicle after an accident</Link> that is comparable to your own, for the entire time yours is being repaired.</li>
+              <li><strong>Lifetime Warranty:</strong> Quality repairs should always come with a lifetime guarantee.</li>
+            </ul>
+
+            <h3 className="text-2xl md:text-3xl font-bebas text-brand-charcoal tracking-wide uppercase mt-12 mb-4 border-l-4 border-brand-orange pl-4">The Truth About "Free" Replacement Vehicles</h3>
+            <p>
+              One of the most valuable services we provide is the <Link to="/free-loan-car" className="text-brand-orange hover:underline font-bold">accident replacement car</Link>. Most people assume they need "rental car cover" on their own insurance policy to get a loan car. This is a myth.
             </p>
             <p>
-              <strong>1. You Must Be 100% Not At Fault:</strong> 
-              The most critical requirement is that the accident must have been caused entirely by the other driver. Common scenarios include being rear-ended while stopped in traffic, another driver running a red light or stop sign and hitting you, or a vehicle merging directly into your lane without looking. If you contributed to the accident in any way (often referred to as contributory negligence or split liability), the standard common law recovery process cannot be applied cleanly, and you may need to rely on your own comprehensive insurance.
-            </p>
-            <p>
-              <strong>2. You Must Have the At-Fault Driver's Details:</strong> 
-              In order for us to recover the costs of your repairs and hire car, we need to know who to claim against. It is vital that you collect the other driver's information at the scene of the crash. This includes their full name, their vehicle registration number, and their contact number or address. Taking a photo of their driver's license is the most effective way to secure this information. If the other driver flees the scene (a hit-and-run) and cannot be identified, a direct claim cannot be made against them.
-            </p>
-            <p>
-              <strong>3. The At-Fault Driver Must Be Insured:</strong> 
-              The other driver must hold a valid insurance policy that covers damage to other people's property. This usually means they need to have either Comprehensive Car Insurance or Third-Party Property Damage Insurance. It is important to note that Compulsory Third Party (CTP) insurance—also known as a Green Slip—only covers personal injury claims, not damage to vehicles. If the at-fault driver is entirely uninsured, recovering the repair costs becomes a complex legal dispute against the individual directly, which typically means we cannot offer our zero-cost service upfront. However, as long as they hold the correct property damage insurance, their insurer will foot the bill.
-            </p>
-            <p>
-              If you meet these three fundamental requirements, you are fully eligible to take advantage of our comprehensive accident management service.
+              If you are not at fault, the at-fault party's insurance is legally liable for your "loss of use" of your vehicle. This means they must pay for you to have a <strong className="text-brand-orange">hire car after accident not at fault</strong>. We provide this vehicle to you upfront and recover the costs from the other side's insurer later. You get a modern, safe, like-for-like vehicle—if you drive a family SUV, we give you a family SUV, not a tiny hatchback.
             </p>
 
-            <h3 className="text-2xl font-bold mt-12 mb-4">Why Use Our Service Instead of Your Own Insurer?</h3>
+            <h3 className="text-2xl md:text-3xl font-bebas text-brand-charcoal tracking-wide uppercase mt-12 mb-4 border-l-4 border-brand-orange pl-4">Why Choice of Repairer Is Critical for Your Safety</h3>
             <p>
-              Following an accident, a driver's first instinct is often to call their own insurance company. While this might seem like the logical step, it is frequently not in the best interest of the innocent driver. Standard insurance policies are designed to handle a wide range of claims, but they are also driven by minimizing costs for the insurer. Here is why choosing a specialized not at fault service is vastly superior to using your own insurer:
+              Insurance companies often have "preferred repairer" networks. These shops are often chosen because they agree to fix cars as cheaply as possible for the insurer. This can lead to the use of non-genuine parts or "speed-focused" repair methods that might compromise your vehicle's structural integrity.
             </p>
             <p>
-              <strong>No Upfront Excess Payments:</strong> 
-              When you claim through your own comprehensive insurance policy, you are almost always required to pay your basic excess upfront when you lodge the claim or drop your car off for repairs—even if the accident wasn't your fault. While your insurer may eventually reimburse this excess once they recover the funds from the at-fault party, that process can take many months. With our service, because we claim directly against the at-fault party from day one, you never have to pay a single cent out of pocket. There is zero excess to pay.
+              As a <strong>not at fault driver</strong>, you have rights that override these insurer preferences. By using an independent specialist, you ensure your vehicle goes to a manufacturer-approved facility that prioritizes quality and safety over the insurer's bottom line. We work with the best smash repairers across Australia to ensure your car is returned to showroom condition.
+            </p>
+
+            <h2 className="text-3xl md:text-4xl font-bebas text-brand-charcoal tracking-wide uppercase mt-12 mb-6 border-l-4 border-brand-orange pl-4">Understanding the Claims Process: Step-by-Step</h2>
+            <p>
+              Navigating the <Link to="/car-accident-claims-process" className="text-brand-orange hover:underline font-bold">not at fault car accident claims</Link> process doesn't have to be complicated. Here is how we handle it for you:
+            </p>
+            <ol className="list-decimal pl-6 space-y-4">
+              <li>
+                <strong>Initial Assessment:</strong> We review the details of your accident, the other driver's information, and the damage to your vehicle to confirm you are not at fault.
+              </li>
+              <li>
+                <strong>Replacement Vehicle Delivery:</strong> Once approved, we deliver a replacement vehicle to your home or work, often within 24 hours.
+              </li>
+              <li>
+                <strong>Vehicle Recovery & Repair:</strong> We organize for your damaged car to be taken to a premium repairer. An independent assessor ensures the quote is fair and covers all necessary genuine parts.
+              </li>
+              <li>
+                <strong>Insurer Liaison:</strong> We handle all communication with the at-fault driver's insurance company. You don't have to spend a single minute on hold.
+              </li>
+              <li>
+                <strong>Quality Check & Return:</strong> After repairs are completed and quality-checked, you swap the loan car back for your perfectly repaired vehicle.
+              </li>
+            </ol>
+
+            <h3 className="text-2xl md:text-3xl font-bebas text-brand-charcoal tracking-wide uppercase mt-12 mb-4 border-l-4 border-brand-orange pl-4">What Information Do You Need to Collect?</h3>
+            <p>
+              To ensure a successful claim, it is vital to gather specific information at the scene of the accident. Having these details allows us to hold the correct party accountable:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Full name and contact number of the other driver.</li>
+              <li>The other driver's license number (take a photo if possible).</li>
+              <li>Registration number of the other vehicle.</li>
+              <li>The make and model of the other vehicle.</li>
+              <li>Insurance company details of the at-fault party.</li>
+              <li>Photos of the damage to both vehicles and the accident location.</li>
+              <li>Contact details of any witnesses.</li>
+            </ul>
+
+            <h3 className="text-2xl md:text-3xl font-bebas text-brand-charcoal tracking-wide uppercase mt-12 mb-4 border-l-4 border-brand-orange pl-4">Frequently Encountered Insurance Tactics</h3>
+            <p>
+              Insurers may try to convince you that you *must* pay an excess or that you *must* use their repairer. They might even try to offer you a small "cash settlement" that doesn't cover the full cost of genuine repairs. These are standard tactics designed to save the insurance company money. 
             </p>
             <p>
-              <strong>Guaranteed Free Accident Replacement Vehicle:</strong> 
-              Most standard insurance policies do not automatically include a hire car following an accident. If they do, it is usually an optional extra that you must pay a premium for, or it may be severely restricted (for example, you might only get a compact car for a maximum of 14 days). If your repairs take four weeks, you are left stranded. Under common law, as the innocent party, you are entitled to a replacement vehicle for the entire duration your car is off the road. We provide this immediately, at no cost to you, ensuring you can still get to work and manage your daily life without interruption.
+              Our role is to protect you from these tactics. We understand the legal landscape and the "duty of care" insurers owe to innocent third parties. We ensure that every cent of your loss is accounted for and recovered.
             </p>
+
+            <h3 className="text-2xl md:text-3xl font-bebas text-brand-charcoal tracking-wide uppercase mt-12 mb-4 border-l-4 border-brand-orange pl-4">National Coverage: Not At Fault Claims Sydney, Melbourne, Brisbane & Beyond</h3>
             <p>
-              <strong>Protect Your No-Claim Bonus and Premium Rates:</strong> 
-              Any claim lodged through your own insurance goes onto your official record. Even if you are deemed not at fault, some insurers may temporarily reduce your no-claim bonus or adjust your premium at renewal time due to the increased "risk profile" associated with having an open claim. By using an independent accident management company, you bypass your own insurer completely. You don't need to make a claim on your policy, which means your insurance record remains completely clean and your premiums are protected.
+              Whether you're looking for <strong className="text-brand-orange">not at fault claims Sydney</strong>, Melbourne, or anywhere else in Australia, our service is nationwide. We have a massive network of partner repairers and vehicle depots in every major city and most regional hubs. From the Gold Coast to Perth, we ensure Australian drivers have access to the highest standard of accident management.
             </p>
+
+            <h3 className="text-2xl md:text-3xl font-bebas text-brand-charcoal tracking-wide uppercase mt-12 mb-4 border-l-4 border-brand-orange pl-4">The Impact on Your Insurance Record</h3>
             <p>
-              <strong>Freedom to Choose Your Repairer and Ensure Quality:</strong> 
-              Many insurance companies utilize networks of "preferred repairers" and may pressure you into taking your vehicle to one of these specific shops. These panel beaters are often contracted by the insurer to perform repairs as cost-effectively as possible. This can sometimes lead to the use of non-genuine, aftermarket parts or compromised repair methods. We act as your independent advocate. We guarantee that your vehicle will be repaired to the manufacturer's exact specifications, using genuine parts where required, ensuring the safety, value, and integrity of your car are fully restored.
+              Many people fear that any claim will increase their premiums. However, because a not at fault claim is made against the *other* person's insurance, it typically has no impact on your No Claims Bonus or your future premium rates. You are simply exercising your right to be compensated for a loss caused by someone else. By using an independent service, you keep your own insurance record clean and avoid the "claim history" that can sometimes follow you when using your own provider.
             </p>
-            <p>
-              <strong>We Handle All the Stress and Administration:</strong> 
-              Navigating an insurance claim is notoriously frustrating. It involves waiting on hold with call centers, chasing up assessors, getting multiple quotes, and trying to organize a rental car yourself. We eliminate all of this stress. Our dedicated team handles every aspect of the process. We liaise with the at-fault driver's insurance company, coordinate the independent assessment, oversee the repair process, and provide you with regular updates. 
-            </p>
-            <p>
-              In conclusion, if you are the victim of a car accident that wasn't your fault, you should not be penalized. Using a specialist not at fault claims service ensures your legal rights are fully exercised. We provide a superior, hassle-free alternative to traditional insurance claims—saving you money, protecting your insurance rating, guaranteeing the quality of your repairs, and keeping you on the road. When it's not your fault, we make sure it truly isn't your problem.
+
+            <div className="bg-brand-charcoal text-white p-10 rounded-2xl mt-16">
+              <h4 className="text-3xl font-bebas mb-6 text-brand-orange tracking-wider">Summary: Why Choose Us?</h4>
+              <p className="mb-8 text-lg opacity-90">
+                At Not At Fault Claims Australia, we believe that an accident that wasn't your fault shouldn't be your problem. We provide a premium, end-to-end service that takes the weight off your shoulders.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="text-brand-orange mt-1 flex-shrink-0" size={20} />
+                  <p>100% Zero Cost to You</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="text-brand-orange mt-1 flex-shrink-0" size={20} />
+                  <p>Like-for-Like Replacement Vehicles</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="text-brand-orange mt-1 flex-shrink-0" size={20} />
+                  <p>Manufacturer Approved Repairs</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="text-brand-orange mt-1 flex-shrink-0" size={20} />
+                  <p>We Handle All Insurer Negotiations</p>
+                </div>
+              </div>
+            </div>
+            
+            <p className="text-center text-brand-mid-grey text-sm mt-12 italic">
+              Disclaimer: Services are subject to eligibility and terms and conditions. Not At Fault Claims Australia is an independent accident management provider and is not affiliated with any specific insurance company.
             </p>
           </div>
         </div>
       </Section>
+</Section>
 
       {/* FAQ Section */}
       <Section className="bg-white py-24 border-t border-gray-100">

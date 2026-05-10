@@ -1,9 +1,20 @@
 import React from 'react';
 import { PageHeader, Section, CTASection } from '../components/UI';
+import SEO from '../components/SEO';
 
 const ReplacementVehicle: React.FC = () => {
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="Accident Replacement Vehicle Australia | Free Like-for-Like Loan Car"
+        description="Need a replacement vehicle after an accident that wasn't your fault? Get a free like-for-like loan car today. No upfront costs, zero excess."
+        canonical="https://notatfaultclaims.com.au/replacement-vehicle-after-accident"
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'Replacement Vehicle', item: 'https://notatfaultclaims.com.au/replacement-vehicle-after-accident' }
+        ]}
+      />
+
       <PageHeader 
         title="Replacement Vehicle After Accident" 
         subtitle="How to get a free like-for-like replacement vehicle after a car accident." 

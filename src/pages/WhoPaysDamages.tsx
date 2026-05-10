@@ -1,9 +1,20 @@
 import React from 'react';
 import { PageHeader, Section, CTASection } from '../components/UI';
+import SEO from '../components/SEO';
 
 const WhoPaysDamages: React.FC = () => {
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="Who Pays for Car Damages When Not At Fault? | Driver Rights AU"
+        description="Wondering who pays for car damages when you're not at fault? Learn about liability, excess, and your right to a free loan car and repairs in Australia."
+        canonical="https://notatfaultclaims.com.au/who-pays-for-damages-not-at-fault"
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'Who Pays For Damages', item: 'https://notatfaultclaims.com.au/who-pays-for-damages-not-at-fault' }
+        ]}
+      />
+
       <PageHeader 
         title="Who Pays For Damages When Not At Fault?" 
         subtitle="Clarifying the financial responsibilities and insurance liabilities after a collision." 

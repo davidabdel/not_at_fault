@@ -8,20 +8,9 @@ import { Link } from 'react-router-dom';
 import { Calendar, Clock, ChevronRight, Search, Phone } from 'lucide-react';
 import { PageHeader, Section, CTASection } from '../components/UI';
 import { BLOG_POSTS, PHONE_NUMBER } from '../constants';
+import SEO from '../components/SEO';
 
 const BlogIndex: React.FC = () => {
-  useEffect(() => {
-    document.title = "Accident Claims Blog & Resources | Not At Fault Claims";
-    
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', "Read the latest guides, tips, and resources about not at fault car accidents, smash repairs, and your rights as an Australian driver.");
-  }, []);
-
   const [activeCategory, setActiveCategory] = useState<string>('All');
   
   const categories = ['All', 'Insurance Claims', 'Repair Process', 'Know Your Rights', 'FAQs', 'Real Stories'];
@@ -32,6 +21,15 @@ const BlogIndex: React.FC = () => {
 
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="Accident Claims Blog & Resources | Not At Fault Claims"
+        description="Read the latest guides, tips, and resources about not at fault car accidents, smash repairs, and your rights as an Australian driver."
+        canonical="https://notatfaultclaims.com.au/blog"
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'Blog', item: 'https://notatfaultclaims.com.au/blog' }
+        ]}
+      />
       <PageHeader 
         title="Resource Centre" 
         subtitle="The Not at Fault Claims Resource Centre — Everything you need to know about accident claims, smash repairs, and your rights as an Australian driver." 

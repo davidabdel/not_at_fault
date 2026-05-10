@@ -7,10 +7,20 @@ import React from 'react';
 import { Car, Clock, CheckCircle2, ShieldCheck, MapPin, ArrowRight, Info } from 'lucide-react';
 import { PageHeader, Section, CTASection, Accordion, InfoBox } from '../components/UI';
 import { HOME_FAQS } from '../constants';
+import SEO from '../components/SEO';
 
 const LoanCar: React.FC = () => {
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="Free Like-For-Like Loan Car After Accident | Not At Fault Claims"
+        description="Don't get stranded. Get a free, modern, like-for-like replacement car while your vehicle is in smash repairs. Zero cost to you if you are not at fault."
+        canonical="https://notatfaultclaims.com.au/free-loan-car"
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'Free Loan Car', item: 'https://notatfaultclaims.com.au/free-loan-car' }
+        ]}
+      />
       <PageHeader 
         title="Free Like-For-Like Loan Car" 
         subtitle="Don't get stranded because someone else hit your car. Get a modern, reliable replacement vehicle within 30 minutes of claim approval." 

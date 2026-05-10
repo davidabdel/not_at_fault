@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, CheckCircle2, ChevronRight, Send, ShieldCheck } from 'lucide-react';
 import { PageHeader, Section } from '../components/UI';
 import { PHONE_NUMBER } from '../constants';
+import SEO from '../components/SEO';
 
 const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -56,6 +57,48 @@ const Contact: React.FC = () => {
 
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="Contact Not At Fault Claims Australia | Accident Help Hotline"
+        description="Need help after a car accident? Contact our not-at-fault specialists for free advice, repairs, and a loan car. We respond within 15 minutes."
+        canonical="https://notatfaultclaims.com.au/contact"
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'Contact', item: 'https://notatfaultclaims.com.au/contact' }
+        ]}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Not At Fault Claims Australia",
+          "image": "https://notatfaultclaims.com.au/logo.png",
+          "@id": "https://notatfaultclaims.com.au/contact",
+          "url": "https://notatfaultclaims.com.au",
+          "telephone": PHONE_NUMBER,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1/457-459 Elizabeth Street",
+            "addressLocality": "Surry Hills",
+            "addressRegion": "NSW",
+            "postalCode": "2010",
+            "addressCountry": "AU"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          "sameAs": [
+            "https://www.facebook.com/notatfaultclaims",
+            "https://twitter.com/notatfaultclaims"
+          ]
+        }}
+      />
       <PageHeader 
         title="Get Help Now" 
         subtitle="Had an accident? We typically respond within 15 minutes during business hours. Leave your details or call our priority hotline." 

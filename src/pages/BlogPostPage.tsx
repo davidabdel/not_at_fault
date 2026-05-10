@@ -9,24 +9,12 @@ import ReactMarkdown from 'react-markdown';
 import { Calendar, Clock, ChevronLeft, ChevronRight, Phone, Share2, Facebook, Twitter, Linkedin, FacebookIcon } from 'lucide-react';
 import { Section, CTASection } from '../components/UI';
 import { BLOG_POSTS, PHONE_NUMBER } from '../constants';
+import SEO from '../components/SEO';
 
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = BLOG_POSTS.find(p => p.slug === slug);
 
-  useEffect(() => {
-    if (post) {
-      document.title = `${post.title} | Not At Fault Claims`;
-      
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', post.excerpt);
-    }
-  }, [post]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -45,6 +33,30 @@ const BlogPostPage: React.FC = () => {
 
   return (
     <div className="flex flex-col">
+      <SEO 
+        title={`${post.title} | Not At Fault Claims`}
+        description={post.excerpt}
+        canonical={`https://notatfaultclaims.com.au/blog/${post.slug}`}
+        ogType="article"
+        ogImage={post.image}
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'Blog', item: 'https://notatfaultclaims.com.au/blog' },
+          { name: post.title, item: `https://notatfaultclaims.com.au/blog/${post.slug}` }
+        ]}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.excerpt,
+          "image": post.image,
+          "datePublished": post.date,
+          "author": {
+            "@type": "Organization",
+            "name": "Not At Fault Claims Australia"
+          }
+        }}
+      />
       {/* Article Header */}
       <header className="bg-brand-charcoal text-white pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

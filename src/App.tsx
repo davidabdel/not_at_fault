@@ -56,6 +56,12 @@ const AppLayout = () => {
           <Route path="/smash-repairs-brisbane" element={<SmashRepairsCity />} />
           <Route path="/smash-repairs-perth" element={<SmashRepairsCity />} />
           <Route path="/smash-repairs-adelaide" element={<SmashRepairsCity />} />
+          
+          <Route path="/not-at-fault-claims-sydney" element={<SmashRepairsCity />} />
+          <Route path="/not-at-fault-claims-melbourne" element={<SmashRepairsCity />} />
+          <Route path="/not-at-fault-claims-brisbane" element={<SmashRepairsCity />} />
+          <Route path="/not-at-fault-claims-perth" element={<SmashRepairsCity />} />
+          <Route path="/not-at-fault-claims-adelaide" element={<SmashRepairsCity />} />
           <Route path="/not-at-fault-accident" element={<NotAtFaultAccident />} />
           <Route path="/replacement-vehicle-after-accident" element={<ReplacementVehicle />} />
           <Route path="/car-accident-claims-process" element={<ClaimsProcess />} />

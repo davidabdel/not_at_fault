@@ -7,10 +7,20 @@ import React from 'react';
 import { FileText, Phone, UserCheck, ShieldAlert, AlertTriangle, CheckCircle2, MessageSquare } from 'lucide-react';
 import { PageHeader, Section, CTASection, Accordion, InfoBox } from '../components/UI';
 import { HOME_FAQS } from '../constants';
+import SEO from '../components/SEO';
 
 const InsuranceHelp: React.FC = () => {
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="Insurance Claim Help Australia | Not At Fault Driver Advice"
+        description="Confused by insurance claims after an accident? Get expert help for your not-at-fault claim. We handle the insurers, paperwork, and repairs at zero cost."
+        canonical="https://notatfaultclaims.com.au/insurance-claim-help"
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'Insurance Help', item: 'https://notatfaultclaims.com.au/insurance-claim-help' }
+        ]}
+      />
       <PageHeader 
         title="Insurance Claim Help" 
         subtitle="Confused by insurance jargon? Stressed by paperwork? We handle the entire third-party claim process so you don't have to." 

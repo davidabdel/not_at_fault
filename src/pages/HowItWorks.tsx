@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { Phone, CheckCircle2, Clock, Calendar, FileText, Wrench, ShieldCheck, ArrowRight, Car } from 'lucide-react';
 import { PageHeader, Section, CTASection, Accordion, InfoBox } from '../components/UI';
 import { HOME_FAQS } from '../constants';
+import SEO from '../components/SEO';
 
 const HowItWorks: React.FC = () => {
   const steps = [
@@ -56,6 +57,15 @@ const HowItWorks: React.FC = () => {
 
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="How the Accident Claims Process Works | Not At Fault Claims"
+        description="Learn our step-by-step process for handling your not-at-fault claim. From initial assessment to vehicle delivery, we handle everything at zero cost to you."
+        canonical="https://notatfaultclaims.com.au/how-it-works"
+        breadcrumbs={[
+          { name: 'Home', item: 'https://notatfaultclaims.com.au' },
+          { name: 'How It Works', item: 'https://notatfaultclaims.com.au/how-it-works' }
+        ]}
+      />
       <PageHeader 
         title="How It Works" 
         subtitle="We take the complexity out of accident claims. From the moment you call until you're back in your repaired car, we've got you covered." 
