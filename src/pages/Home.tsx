@@ -424,7 +424,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </Section>
-</Section>
 
       {/* FAQ Section */}
       <Section className="bg-white py-24 border-t border-gray-100">
