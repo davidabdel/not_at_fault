@@ -199,7 +199,7 @@ const SmashRepairsCity: React.FC = () => {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', `Expert smash repairs in ${cityName}. Not at fault? We handle repairs, insurers & your free loan car. No excess. Zero cost. Call 0485 044 333.`);
+    metaDescription.setAttribute('content', `Expert smash repairs in ${cityName}. Not at fault? We handle repairs, insurers & your free loan car. No excess. Zero cost. Call 1800 407 911.`);
 
     // Meta robots
     let metaRobots = document.querySelector('meta[name="robots"]');
@@ -239,7 +239,7 @@ const SmashRepairsCity: React.FC = () => {
               className="hidden sm:flex items-center gap-2 font-bold text-[#1C1C1C] text-[18px]"
             >
               <Phone size={18} className="text-[#FF5C00]" />
-              0485 044 333
+              1800 407 911
             </a>
             <a 
               href="tel:0485044333" 
@@ -276,7 +276,7 @@ const SmashRepairsCity: React.FC = () => {
               className="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-[#FF5C00] text-white h-[56px] px-8 rounded-[100px] font-bebas text-[16px] tracking-[0.1em] hover:bg-[#E05200] transition-colors mb-4 uppercase md:animate-none animate-[pulse_2s_infinite]"
             >
               <Phone size={20} />
-              CALL US NOW — 0485 044 333
+              CALL US NOW — 1800 407 911
             </a>
             
             <button 
@@ -374,7 +374,7 @@ const SmashRepairsCity: React.FC = () => {
               onClick={() => fireEvent('call_button_click')}
               className="inline-flex items-center justify-center bg-[#FF5C00] text-white h-[56px] px-8 rounded-[100px] font-bebas text-[16px] tracking-[0.1em] hover:bg-[#E05200] transition-colors uppercase"
             >
-              CALL US NOW — 0485 044 333
+              CALL US NOW — 1800 407 911
             </a>
           </div>
         </div>
@@ -450,7 +450,7 @@ const SmashRepairsCity: React.FC = () => {
             onClick={() => fireEvent('phone_number_click')}
             className="block font-bebas text-[52px] text-white mb-8 hover:opacity-80 transition-opacity"
           >
-            0485 044 333
+            1800 407 911
           </a>
           <button 
             onClick={() => SmoothScroll('form-section')}
@@ -486,7 +486,7 @@ const SmashRepairsCity: React.FC = () => {
           className="w-full h-full flex items-center justify-center gap-2 text-white font-bebas text-[20px] tracking-[0.05em] uppercase"
         >
           <Phone size={20} />
-          CALL 0485 044 333
+          CALL 1800 407 911
         </a>
       </div>
     </div>
